@@ -117,4 +117,4 @@ if USE_S3:
         MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
     elif AWS_STORAGE_BUCKET_NAME and AWS_S3_REGION_NAME:
         MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com/media/"
-    DEFAULT_FILE_STORAGE = "tasks.storage_backends.MediaStorage"
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
