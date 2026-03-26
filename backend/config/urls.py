@@ -9,6 +9,3 @@ urlpatterns = [
     path('api/', include('tasks.urls')),
     path('health/', lambda request: JsonResponse({'status': 'ok'})),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
